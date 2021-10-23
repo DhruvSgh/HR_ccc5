@@ -1,0 +1,13 @@
+from collections import OrderedDict
+n=int(input())
+d=OrderedDict()
+for i in range(n):
+    arr=list(map(str,input().split()))
+    name=arr[0]
+    avg=float(arr[1])
+    d[name]=avg
+m=max(d.values())
+for k,v in d.items():
+    if(v==m):
+        print(k)
+        break
